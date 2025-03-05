@@ -1,8 +1,10 @@
 Generador de Nuevos Equipos
+
 Descripción:
 Este programa asigna miembros de diferentes equipos iniciales a nuevos equipos de 2 personas, asegurando que no se asignen dos personas que estuvieron en el mismo equipo inicialmente. Se generan 6 nuevos equipos con esta restricción.
 
 Equipos Iniciales
+
 El programa toma los siguientes equipos iniciales:
 
 Los Algoritmos Anarquistas: Héctor, Addi, Jesús Alberto
