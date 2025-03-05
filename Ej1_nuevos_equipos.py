@@ -56,4 +56,4 @@ while len(todos_los_miembros) > 1:  # Mientras haya al menos 2 personas
 
 # Mostrar los nuevos equipos
 for i, equipo in enumerate(nuevos_equipos, 1):
-    print(" {i}: {equipo}")
+    print(f" {i}: {equipo}")
