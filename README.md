@@ -25,6 +25,7 @@ El programa selecciona aleatoriamente dos miembros de la lista.
 Se comprueba que los dos miembros seleccionados no provengan del mismo equipo inicial.
 Si los dos miembros están en el mismo equipo inicial, el programa los devuelve a la lista y selecciona nuevamente dos miembros aleatorios.
 Si los miembros son de equipos diferentes, se asignan a un nuevo equipo.
+
 Creación de 6 Equipos: El proceso se repite hasta que se formen exactamente 6 equipos de 2 personas.
 
 Resultado:
