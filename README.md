@@ -8,13 +8,19 @@ Equipos Iniciales
 El programa toma los siguientes equipos iniciales:
 
 Los Algoritmos Anarquistas: Héctor, Addi, Jesús Alberto
+
 Los Hackers de Café: Tania, Patricia, Rebeca
+
 Los Codificadores Nocturnos: Jamileth, Bryan, Rosalinda
+
 Los Ctrl+Z: Galilea, Jennifer, Juan
+
 Funcionamiento del Programa
+
 Unificación de Miembros: El programa comienza uniendo todos los miembros de los equipos iniciales en una lista.
 
 Asignación de Nuevos Equipos:
+
 El programa selecciona aleatoriamente dos miembros de la lista.
 Se comprueba que los dos miembros seleccionados no provengan del mismo equipo inicial.
 Si los dos miembros están en el mismo equipo inicial, el programa los devuelve a la lista y selecciona nuevamente dos miembros aleatorios.
