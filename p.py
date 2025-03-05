@@ -1,20 +1,12 @@
-"""
-Jennifer Marlene Gutiérrez Beteta
+'''
+Jennifer Marlene Gutierrez Beteta
 04 de febrero de 2025.
-Descripción del programa:
-
+Descripcion:
 El curso tiene los siguientes equipos:
 
-Los Algoritmos Anarquistas: Héctor, Addi y Jesús Alberto.
-Los Hackers de Café: Tania, Patricia, Rebeca.
-Los Codificadores nocturnos: Jamileth, Bryan, Rosalinda.
-Los Ctrl+Z: Galilea, Jennifer, Juan.
 
-Este programa debe generar 6 nuevos equipos de 2 personas cada uno,
-pero con la restricción de que no puede haber dos personas que ya
-estuvieron en el mismo equipo de arriba.
 
-"""
+'''
 
 import random
 
@@ -23,7 +15,7 @@ print("*** NUEVOS EQUIPOS ***")
 print("")
 
 # Equipos iniciales
-Algoritmos_Anarquistas = ["Héctor", "Addi", "Jesús Alberto"]
+Algoritmos_Anarquistas = ["Hector", "Addi", "Jesus Alberto"]
 Hackers_de_Cafe = ["Tania", "Patricia", "Rebeca"]
 Codificadores_nocturnos = ["Jamileth", "Bryan", "Rosalinda"]
 Ctrl_Z = ["Galilea", "Jennifer", "Juan"]
