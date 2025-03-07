@@ -22,5 +22,6 @@ class Profesor:
         self.Temas_dominados.append(Tema)
         print(f"Temas dominados: {Tema}")
     def Enseñar_tema(No_tema:int)->str:
-        No_tema = int(input("Ingrese el tema:"))
-        print(f"Tema a enseñar: {No_tema}")
+        self.Enseñar_Tema.append(No_tema)
+        print(f"
+# Revisar, falat el self y checar el subindice para la ultima función.
