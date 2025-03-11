@@ -4,24 +4,44 @@ Jennifer Marlene Gutiérrez Beteta
 Descripción del programa:
 """
 
-# Se crea al estudiante.
+# Se crea la clase estudiante.
 class Estudiante:   #La clases se escriben en mayuscula.
-    def __init__(self,NombreE:str)->None:
-        self.Nombre = NombreE
-        self.Temas_aprendidos =[]
-    def Aprender_tema(self,Tema: str)-> None:
-        self.Temas_aprendidos.append(Tema)
-        print(f"{self.Nombre} aprendió {Tema}")
-
-
-class Profesor:
     def __init__(self,Nombre:str)->None:
         self.Nombre = Nombre
-        self.Temas_dominados = []
-    def Dominar_tema(self,Tema:str)->None:
+        self.Temas_aprendidos =[]
+    def aprender_tema(self,Tema: str)-> None:
+        self.Temas_aprendidos.append(Tema)
+        print(f"{self.Nombre} aprendió {Tema}")
+    def __str__ (self)->str:
+        return (f"Estudiante (Nombre:{self.Nombre},Temas aprendidos:{self.Temas_aprendidos}")
+
+# Se crea la clase profesor.
+class Profesor:
+    def __init__(self,Nombre:str,Temas_dominados:list[str]):
+        self.Nombre = Nombre
+        self.Temas_dominados = Temas_dominados
+
+    def dominar_tema(self,Tema:str)->None:
         self.Temas_dominados.append(Tema)
         print(f"Temas dominados: {Tema}")
-    def Enseñar_tema(No_tema:int)->str:
-        self.Enseñar_Tema.append(No_tema)
-        print(f"
-# Revisar, falat el self y checar el subindice para la ultima función.
+
+    def enseñar_tema(self,No_tema:int)->str:
+        if No_tema > len(self.Temas_dominados):
+            return self.Temas_dominados[No_tema]
+        else:
+            return "Fuera de rango"
+
+
+
+if __name__ == '__main__':
+    Estudiante1 = Estudiante("Jennifer Marlene Gutiérrez Beteta")
+    Estudiante2 = Estudiante("Rosalinda Aquino Perez")
+    Estudiante1.aprender_tema("Evolución sitios web")
+    Estudiante2.aprender_tema("Internet de las cosas")
+    print(Estudiante1)
+    print(Estudiante2)
+
+    Profesor1 = Profesor("Alberto")
+    Profesor1.dominar_tema("Evolución sitios web")
+    Profesor1.enseñar_tema(1)
+    print(Profesor1)
