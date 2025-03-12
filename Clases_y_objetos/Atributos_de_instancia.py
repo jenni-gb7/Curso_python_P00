@@ -1,6 +1,6 @@
 """
 Jennifer Marlene Gutiérrez Beteta
-06 de febrero de 2025.
+06 de Marzo de 2025.
 Descripción del programa: Atributos de instancia.
 """
 
