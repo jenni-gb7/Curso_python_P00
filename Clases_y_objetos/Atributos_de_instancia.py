@@ -1,7 +1,7 @@
 """
 Jennifer Marlene Gutiérrez Beteta
 06 de febrero de 2025.
-Descripción del programa:
+Descripción del programa: Atributos de instancia.
 """
 
 # Se crea la clase estudiante.
@@ -44,9 +44,16 @@ if __name__ == '__main__':
     Estudiante2.aprender_tema("Internet de las cosas")
     print(Estudiante1)
     print(Estudiante2)
-
+    print()
     Profe= Profesor("Alberto",["Atributos de distancia","Evolución sitios web","Internet de las cosas"])
     print( Profe)
-    P=Profe.enseñar_tema(2)
-    print(P)
+    Num_tema=Profe.enseñar_tema(0)
+    print(Num_tema)
+    print()
+    Estudiante1.aprender_tema(Num_tema)
+    Estudiante2.aprender_tema(Num_tema)
+    print()
+    # Tambien se pude hacer de la siguiente manera:
+    Estudiante2.aprender_tema(Profe.enseñar_tema(1))
+
 
