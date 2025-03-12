@@ -6,6 +6,7 @@ Descripción del programa:
 
 # Se crea la clase estudiante.
 class Estudiante:   #La clases se escriben en mayuscula.
+    #__________________Constructor___________________________
     def __init__(self,Nombre:str)->None:
         self.Nombre = Nombre
         self.Temas_aprendidos =[]
@@ -17,6 +18,7 @@ class Estudiante:   #La clases se escriben en mayuscula.
 
 # Se crea la clase profesor.
 class Profesor:
+    # __________________Constructor___________________________
     def __init__(self,Nombre:str,Temas_dominados:list[str]):
         self.Nombre = Nombre
         self.Temas_dominados = Temas_dominados
@@ -26,11 +28,13 @@ class Profesor:
         print(f"Temas dominados: {Tema}")
 
     def enseñar_tema(self,No_tema:int)->str:
-        if No_tema > len(self.Temas_dominados):
+        if No_tema < len(self.Temas_dominados):
             return self.Temas_dominados[No_tema]
         else:
             return "Fuera de rango"
 
+    def __str__(self) -> str:
+        return (f"Profesor (Nombre:{self.Nombre},Temas aprendidos:{self.Temas_dominados}")
 
 
 if __name__ == '__main__':
@@ -41,7 +45,8 @@ if __name__ == '__main__':
     print(Estudiante1)
     print(Estudiante2)
 
-    Profesor1 = Profesor("Alberto")
-    Profesor1.dominar_tema("Evolución sitios web")
-    Profesor1.enseñar_tema(1)
-    print(Profesor1)
+    Profe= Profesor("Alberto",["Atributos de distancia","Evolución sitios web","Internet de las cosas"])
+    print( Profe)
+    P=Profe.enseñar_tema(2)
+    print(P)
+
