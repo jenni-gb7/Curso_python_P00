@@ -1,6 +1,6 @@
 """
 Jennifer Marlene Gutiérrez Beteta
-05 de febrero de 2025.
+05 de Marzo de 2025.
 Descripción del programa:
 """
 # Se crea la persona.
@@ -8,6 +8,7 @@ class Persona:
     # Hace referencia a uno mismo, al objeto que se este utilizando, se crea una persona.
     def __init__(self,Nombre:str,Edad:int, Altura:float,Peso:float):    #Metodo constructor.
     # Atributos del objeto.
+
         self.Nombre = Nombre
         self.Edad = Edad
         self.Altura = Altura

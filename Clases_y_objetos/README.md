@@ -1,1 +1,1 @@
-directorio creado para diferntes programas para manipular clases y objetopos.
+directorio creado para diferentes programas para manipular clases y objetopos.
