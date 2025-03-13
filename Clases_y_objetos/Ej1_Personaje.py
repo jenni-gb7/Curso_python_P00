@@ -31,7 +31,7 @@ class Personaje:
     # Atributo de clase. En este caso, se utiliza para generar ID de los empleados.
     No_id = 1
 
-    def __init__(self,X:int,Y:int)-> None:
+    def __init__(self)-> None:
         """
         Constructor del empleado.
         :param X: Movimientos en x.
@@ -39,8 +39,8 @@ class Personaje:
         """
 
         # Atributos de instancia.
-        self.X = X
-        self.Y = Y
+        self.X = 0
+        self.Y = 0
 
         # Se asigna el atributo de clase como atributo de instancia y luego se incrementa.
         # Nota: Para utilizar los atributos de clase, se utiliza el nombre de la clase seguido de un punto
@@ -48,19 +48,31 @@ class Personaje:
         self.id_Personaje = Personaje.No_id
         Personaje.No_id += 1
 
-    def ordenes(self,X:int,Y:int)-> None:
-        pass
+    def moverse(self,Orden:int)-> None:
+            if Orden == 'A' or 'a' and self.Y > 11:
+                self.Y +=1
+            elif  Orden == 'R' or 'r' and self.Y > 11:
+                self.Y -= 1
+            elif Orden == 'D' or 'd' and self.X > 11:
+                self.X += 1
+            elif Orden == 'I' or 'i' and self.X > 11:
+                self.X -= 1
+            else:
+                print("No válido. Por favor intenta de nuevo")
 
-    def moverse(self):
-        pass
-
+    def posicion_actual(self)-> None:
+        print(f"Posición actual: (X,Y)= {self.Y},{self.Y}")
 
     def __str__(self) -> str:
-        return (f"Personaje id: {self.id_Personaje}")
+        return (f"Personaje id: {self.id_Personaje}, (X,Y): ({ self.X},{self.Y})")
 
-
-#-----------------    CÓDIGO A NIVEL DE MÓDULO ------------------------
 if __name__ == '__main__':
-    Personaje1 = Personaje("1","2")
+    print("------Se crea el objeto de la clase Personaje y se imprime____\n")
+    Personaje1 = Personaje()
     print(Personaje1)
-    print(Personaje.No_id)
+    print()
+    print("------Se solicita iterativamente las secuencias de movimiento____\n")
+    Orden = input("Ingresa las ordenes de movimineto:")
+    Personaje1.moverse(Orden)
+    Personaje1.posicion_actual()
+
