@@ -59,7 +59,7 @@ class Personaje:
         return (f"Personaje id: {self.id_Personaje}")
 
 
-    #-----------------    CÓDIGO A NIVEL DE MÓDULO ------------------------
+#-----------------    CÓDIGO A NIVEL DE MÓDULO ------------------------
 if __name__ == '__main__':
     Personaje1 = Personaje("1","2")
     print(Personaje1)
