@@ -48,31 +48,38 @@ class Personaje:
         self.id_Personaje = Personaje.No_id
         Personaje.No_id += 1
 
-    def moverse(self,Orden:int)-> None:
-            if Orden == 'A' or 'a' and self.Y > 11:
+    def moverse(self,orden:str)-> None:
+        for i in orden:
+            if i == 'a' and self.Y <= 9:
                 self.Y +=1
-            elif  Orden == 'R' or 'r' and self.Y > 11:
+            elif  i == 'r' and self.Y  >= 1:
                 self.Y -= 1
-            elif Orden == 'D' or 'd' and self.X > 11:
+            elif i == 'd' and self.X <= 9:
                 self.X += 1
-            elif Orden == 'I' or 'i' and self.X > 11:
+            elif i == 'i' and self.X  >= 1:
                 self.X -= 1
-            else:
-                print("No válido. Por favor intenta de nuevo")
 
     def posicion_actual(self)-> None:
-        print(f"Posición actual: (X,Y)= {self.Y},{self.Y}")
+        print(f"Posición actual: (X,Y)= {self.X},{self.Y}")
 
     def __str__(self) -> str:
         return (f"Personaje id: {self.id_Personaje}, (X,Y): ({ self.X},{self.Y})")
 
 if __name__ == '__main__':
+    orden = None
     print("------Se crea el objeto de la clase Personaje y se imprime____\n")
     Personaje1 = Personaje()
     print(Personaje1)
     print()
     print("------Se solicita iterativamente las secuencias de movimiento____\n")
-    Orden = input("Ingresa las ordenes de movimineto:")
-    Personaje1.moverse(Orden)
-    Personaje1.posicion_actual()
+    while orden != 's':
+        orden = input("Ingresa las ordenes de movimineto:")
+        orden = orden.lower()   # Todas las letras ingresadas se convierten en minúsculas.
+        print()
+        Personaje1.moverse(orden)
+        Personaje1.posicion_actual()
+
+    print("Fin del programa.")
+
+
 
