@@ -19,14 +19,17 @@ time = 11.8--> litres = 5
 
 print(" *** Litros de agua ***")
 
-tiempo = None
-litros= 0.5
+ttiempo = None
 
-def litros_de_agua(tiempo,litros):
-    litres = tiempo * litros
-    return int (litres)
+def litres_agua(tiempo:float)->None:
+    """
+    Param: Recibe el tiempo en tipo flotante.
+    Return: Los litros de agua de tipo entero"""
+    litros = tiempo * 0.5
+    return int (litros)
+
 
 if __name__ == '__main__':
-    tiempo = float(input("Ingresa las horas:"))
-    resultado = litros_de_agua(tiempo,litros)
+    tiempo = float(input("Ingresa las horas:")) # Pide el tiempo.
+    resultado = litres_agua(tiempo) #Llamada a la función.
     print(f"Tiempo:{tiempo} --->  Litros:{resultado}")
