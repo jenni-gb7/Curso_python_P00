@@ -41,7 +41,7 @@ class Empresa:
         for empleado in self.empleados:
             print(empleado)
 
-    '''def __str__(self) -> str:
+    def __str__(self) -> str:
         """
         Se utiliza para mostrar los empleados de la empresa en forma de lista.
         """
@@ -49,14 +49,21 @@ class Empresa:
         # se unen con ", " a través del métod0 str.join().
         # Este patrón es muy común en Python para obtener una cadena a partir de una lista.
         empleados = ", ".join(str(empleado) for empleado in self.empleados)
-        return f"Empresa({self.nombre = }, {empleados})"'''
+        return f"Empresa({self.nombre = }, {empleados})"
 
 
 if __name__ == '__main__':
     empleado1 = Empleado("Jose",200)
     empleado2 = Empleado("Maria", 250)
+    Juan = Empleado("Juan", 250)
+
 
     unsij = Empresa("unsij",empleado1,empleado2)
     unsij.agregar_empleados(empleado1,empleado2)
     unsij.mostrar_empleados()
+    print()
     print(unsij)# Def str
+    print()
+    print(Juan)
+    Juan.Nombre = "Juan Bautista"
+    print(Juan)
