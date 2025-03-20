@@ -27,7 +27,7 @@ class CuentaBancaria:
         self._saldo = nuevo_saldo
 
     def __str__(self) -> str:
-        return (f"Titular id: {self.titular},Saldo:{self.saldo}")
+        return (f"Titular : {self.titular}, Saldo:{self.saldo}")
 
 #- privados
 ##protegido
