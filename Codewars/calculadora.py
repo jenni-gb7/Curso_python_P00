@@ -15,17 +15,16 @@ print("**** CALCULADORA ****")
 print()
 
 def menu_pri()-> None:
-    while opc!= 0:
-        print("== MENÚ PRINCIPAL ==")
-        print(" ")
-        print("[0].- Salir")
-        print("[1].- Suma")
-        print("[2].- Resta")
-        print("[3].- Multiplicación")
-        print("[4].- División")
-        print(" ")
-        opc = int(input("Ingresa una opción: "))
-        return opc
+    print("== MENÚ PRINCIPAL ==")
+    print(" ")
+    print("[0].- Salir")
+    print("[1].- Suma")
+    print("[2].- Resta")
+    print("[3].- Multiplicación")
+    print("[4].- División")
+    print(" ")
+    opc = int(input("Ingresa una opción: "))
+    return opc
 
 def operaciones(opc,num1,num2)-> None:
     if opc == 1:
