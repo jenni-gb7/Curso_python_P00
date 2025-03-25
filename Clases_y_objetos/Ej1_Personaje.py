@@ -39,6 +39,7 @@ class Personaje:
         """
 
         # Atributos de instancia.
+        # Inicializa la posición en el origen
         self.X = 0
         self.Y = 0
 
@@ -49,22 +50,34 @@ class Personaje:
         Personaje.No_id += 1
 
     def moverse(self,orden:str)-> None:
+        """
+        Método que recibe una cadena de caracteres indicando los movimientos del personaje.
+        Se verifican los límites de la ventana antes de actualizar la posición.
+        Parámetro:
+        `orden`: Cadena de caracteres con las instrucciones de movimiento ('a', 'r', 'd', 'i')"""
         for i in orden:
             if i == 'a' and self.Y <= 9:
-                self.Y +=1
+                self.Y +=1 # Movimiento hacia arriba
             elif  i == 'r' and self.Y  >= 1:
-                self.Y -= 1
+                self.Y -= 1 # Movimiento hacia abajo
             elif i == 'd' and self.X <= 9:
-                self.X += 1
+                self.X += 1 #Movimiento a la derecha
             elif i == 'i' and self.X  >= 1:
-                self.X -= 1
+                self.X -= 1 # Movimiento a la izquierda
 
     def posicion_actual(self)-> None:
+        """
+        Método que imprime en consola la posición actual del personaje en el formato (X, Y).
+        """
         print(f"Posición actual: (X,Y)= {self.X},{self.Y}")
 
     def __str__(self) -> str:
+        """
+        Método especial que devuelve una representación en cadena del objeto Personaje.
+        """
         return (f"Personaje id: {self.id_Personaje}, (X,Y): ({ self.X},{self.Y})")
 
+""" %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 if __name__ == '__main__':
     orden = None
     print("------Se crea el objeto de la clase Personaje y se imprime____\n")
