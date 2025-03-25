@@ -1,18 +1,19 @@
 """
 Jennifer Marlene Gutiérrez Beteta
-11 de Marzo de 2025.
+24 de Marzo de 2025.
 Descripción del programa:"""
 
 class Scoreboard:
-# __________________Constructor___________________________
-    def __init__(self,points:int,text_color:tuple[int,int,int],font:str,size:float):
+    # __________________Constructor___________________________
+    def __init__(self,points:int = 0,text_color:tuple[int] = (0,0,0),font:str= "kimono", size:float = 48):
         self._points = points
         self._text_color = text_color
         self._font = font
         self._size = size
-    def draw(self):
-        pass
-# -----------------Métodos de acceso---------
+    def draw(self)->None:
+        print(f"Score = {self.points}")
+
+    # -----------------Métodos de acceso---------
 # Points
     @property
     def points(self) -> int:
@@ -46,8 +47,8 @@ class Scoreboard:
     def size(self, ssize: float) -> None:
         self._size = ssize # Value
 
-    def __str__(self) -> float:
-        return (f"points : {self.points}, Saldo:{self.saldo}")
+    def __str__(self) -> str:
+        return (f"Scoreboard (points = {self.points}, text_color = {self.text_color}, Font =  {self.font},Size = {self.size})")
 
 
 
@@ -63,7 +64,7 @@ if __name__ == "__main__":
 
     print()
     print("Se crea otro objeto con (points, font y text_color) como argumentos por nombre:")
-    marcador2 = Scoreboard(10, font="Arial", text_color= (127, 127, 127))
+    marcador2 = Scoreboard(points = 10,font= "Arial", text_color = (127, 127, 127))
     print(f"marcador2 = {marcador2}")
 
     print()
