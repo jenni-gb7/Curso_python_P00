@@ -1,3 +1,63 @@
+"""
+Jennifer Marlene Gutiérrez Beteta
+24 de Marzo de 2025.
+Descripción del programa:"""
+from Clases_y_objetos.Ej1_Scoreboard import Scoreboard
+
+class Window:
+    # __________________Constructor___________________________
+    def __init__(self,title:str = "Buscaminas",width:int = 800,height:int = 900,scoreboard : Scoreboard = Scoreboard()):
+        self._title = title
+        self._width = width
+        self._height = height
+        self._scoreboard = scoreboard
+
+    def draw_scoreaboard(self)->None:
+        pass
+
+    def update_scoreaboard(self,points: int)-> None:
+        pass
+
+    # -----------------Métodos de acceso---------
+#title
+    @property
+    def title(self) -> int:
+        return self._title
+
+    @title.setter
+    def title(self, ttitle: int) -> None:
+        self._title = ttitle
+
+#width
+    @property
+    def width(self) -> int:
+        return self._width
+
+    @width.setter
+    def twidth(self, wwidth: int) -> None:
+        self._twidth = wwidth
+# height
+    @property
+    def height(self) -> int:
+        return self._height
+
+    @height.setter
+    def height(self, hheight:int) -> None:
+        self._height = hheight
+
+#scoreaboard
+    @property
+    def scoreaboard(self) -> int:
+        return self._scoreboard
+
+    @scoreaboard.setter
+    def twidth(self, sscoreboard: int) -> None:
+        self._scoreboard = sscoreboard
+
+    def __str__(self)->str:
+        return (f"Windows(title = {self.title}, width = {self.width}, height=  {self.height}, scoreboard = (points = {self._scoreboard.points}, text_color = {self._scoreboard.text_color}, font = {self._scoreboard.font}, size = {self._scoreboard.size}")
+
+
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 """Importar el ejercicio 2 de scoreboard"""
 
