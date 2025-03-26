@@ -6,27 +6,28 @@ from Clases_y_objetos.Ej1_Scoreboard import Scoreboard
 
 class Window:
     # __________________Constructor___________________________
-    def __init__(self,title:str = "Buscaminas",width:int = 800,height:int = 900,scoreboard : Scoreboard = Scoreboard()):
+    def __init__(self,title:str = "Buscaminas",width:int = 800,height:int = 900,scoreboard : Scoreboard = Scoreboard())->None:
         self._title = title
         self._width = width
         self._height = height
         self._scoreboard = scoreboard
 
-    def draw_scoreaboard(self)->None:
-        pass
+    def draw_scoreboard(self)->None:
+        self._scoreboard.draw()
 
-    def update_scoreaboard(self,points: int)-> None:
-        pass
+    def update_score(self,points:int)-> None:
+        self._scoreboard._points = points
+        self._scoreboard.draw()
 
     # -----------------Métodos de acceso---------
 #title
     @property
-    def title(self) -> int:
+    def title(self) -> str:
         return self._title
 
     @title.setter
-    def title(self, ttitle: int) -> None:
-        self._title = ttitle
+    def title(self, title: str) -> None:
+        self._title = title
 
 #width
     @property
@@ -34,8 +35,8 @@ class Window:
         return self._width
 
     @width.setter
-    def twidth(self, wwidth: int) -> None:
-        self._twidth = wwidth
+    def width(self, width: int) -> None:
+        self._width = width
 # height
     @property
     def height(self) -> int:
@@ -106,4 +107,4 @@ if __name__ == "__main__":
     print(f"buscaminas = {buscaminas}")
     print("Se reemplaza el scoreboard utilizando el setter:")
     buscaminas.scoreboard = marcador_solitario
-    print(f"buscaminas = {buscaminas}")
+    print(f"buscaminas = {buscaminas.scoreboard}")
