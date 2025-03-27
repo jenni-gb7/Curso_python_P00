@@ -20,11 +20,12 @@ time = 11.8--> litres = 5
 print(" *** Litros de agua ***")
 
 
-def litros(tiempo):
-    return int(tiempo * 0.5)
+def litres(time):
+    res = time * 0.5
+    return int(res)
 
 
 if __name__ == '__main__':
-    tiempo = float(input("Ingresa las horas:"))
-    resultado = litros(tiempo)
-    print(f"Tiempo:{tiempo} --->  Litros:{resultado}")
+    time = float(input("Ingresa las horas:"))
+    res = litres(time)
+    print(f"Tiempo:{time} --->  Litros:{res}")
