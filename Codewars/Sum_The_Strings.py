@@ -10,15 +10,7 @@ Cree una función que tome 2 números enteros en forma de cadena como entrada y 
 "-5", "3" --> "-2"""
 
 def sum_str(a, b):
-    if a == "" :
-        res = 0 + b
-        return int(res)
-    elif b == "" :
-        res = a + 0
-        return int(res)
-    else:
-        res = a + b
-        return int(res)
+    return str(int('0' + a) + int('0' + b))
 
 if __name__ == '__main__':
     a = str(input("Ingresa el primer número:"))
