@@ -26,7 +26,7 @@ def people_with_age_drink(age):
     else:
         return 'drink whisky'
 
-
+#
 if __name__ == '__main__':
     age = int(input("Ingresa tu edad:"))
     print(people_with_age_drink(age))
