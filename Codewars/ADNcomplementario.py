@@ -8,7 +8,7 @@ Ejemplo: (entrada --> salida)
 "ATTGC" --> "TAACG"
 "GTAT" --> "CATA"""
 
-
+#3
 def DNA_strand(dna):
 
     texto_convertido = ""
