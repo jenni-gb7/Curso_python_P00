@@ -10,6 +10,14 @@ Cree una función que tome 2 números enteros en forma de cadena como entrada y 
 "-5", "3" --> "-2"""
 
 def sum_str(a, b):
+    """
+    Suma dos números representados como cadenas de texto y devuelve el resultado como cadena.
+    Parámetros:
+        a (str): Primer número en forma de cadena.
+        b (str): Segundo número en forma de cadena.
+
+    Retorna: str: La suma de los dos números, también en forma de cadena.
+        """
     return str(int('0' + a) + int('0' + b))
 
 if __name__ == '__main__':

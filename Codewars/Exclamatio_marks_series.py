@@ -10,6 +10,11 @@ Reemplace todas las vocales por signos de exclamación en la oración. es vocal.
 """
 
 def replace_exclamation(us):
+    """
+    Reemplaza todas las vocales en la cadena por '!'.
+    Parámetros: text (str): La cadena de entrada.
+    Retorna: str: La cadena con las vocales reemplazadas por '!'.
+        """
     st = ""  # Cadena vacía para almacenar el resultado
     for Letra in us:
          # Reemplazar vocales minúsculas y mayúsculas.

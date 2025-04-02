@@ -21,11 +21,17 @@ print(" *** Litros de agua ***")
 
 
 def litres(time):
+    """
+    Calcula la cantidad de litros de agua que Nathan debe beber.
+    Parámetros: time (float): Cantidad de horas que ha estado en bicicleta.
+    Retorna: int: Litros de agua redondeados hacia abajo.
+       """
     res = time * 0.5
     return int(res)
 
 
 if __name__ == '__main__':
     time = float(input("Ingresa las horas:"))
+    # Calcula los litros de agua
     res = litres(time)
     print(f"Tiempo:{time} --->  Litros:{res}")
