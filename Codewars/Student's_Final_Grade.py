@@ -25,6 +25,12 @@ Esta función debe devolver un número (calificación final). Existen cuatro tip
 20, 2 --> 0"""
 
 def final_grade(exam, projects):
+    """
+    Calcula la calificación final de un estudiante basada en el examen y los proyectos completados.
+    Parámetros: exam (int): Calificación del examen (de 0 a 100).
+    projects (int): Número de proyectos completados.
+    Retorna: int: Calificación final según las reglas descritas.
+        """
     if (exam >= 90 or projects > 10):
         return 100
     elif exam >= 75 and projects >= 5:

@@ -12,7 +12,12 @@ Ejemplos (entrada --> salida)
 "a234"   -->  false """
 
 def validate_pin(pin):
-   return len(pin) in (4,6) and pin.isdigit()
+    """
+    Verifica si el PIN es válido.
+    Parámetros: pin (str): Código PIN ingresado.
+    Retorna: bool: True si el PIN es válido, False en caso contrario.
+        """
+    return len(pin) in (4,6) and pin.isdigit()  # Verifica que tenga 4 o 6 dígitos y que sean solo número
 
 
 if __name__ == '__main__':

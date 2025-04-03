@@ -14,6 +14,11 @@ Complete la función que devuelve el día de la semana de acuerdo con el número
 De lo contrario, devoluciones "Wrong, please enter a number between 1 and 7"""
 
 def whatday(num):
+    """
+    Determina el día de la semana según el número ingresado.
+    Parámetros: num (int): Número correspondiente al día de la semana (1-7).
+    Retorna: str: El nombre del día de la semana o un mensaje de error si el número es inválido.
+        """
     if num == 1:
         return "Sunday"
     elif num == 2:
