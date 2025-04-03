@@ -101,18 +101,9 @@ def crear_equipo():
     equipo = Equipo(nombre_e)
 
     while True:
-        nombre_j = input("Ingrese el nombre del jugador (o 'salir' para terminar): ")
-        if nombre_j.lower() == 'salir':
+        nombre_j = input("Ingrese el nombre del jugador (o '' para terminar): ")
+        if nombre_j.lower() == '':
             break
-
-        nombre_j = validar_entrada_letras("Ingrese el nombre del jugador: ")
-        numero_j = validar_entrada_numeros("Ingrese el número del jugador: ")
-        goles_j = validar_entrada_numeros("Ingrese los goles anotados: ")
-        jugador = Jugador(nombre_j, numero_j, goles_j)
-
-        equipo.agregar_jugadores(jugador)
-        print(f"Jugador {nombre_j} agregado al equipo {nombre_e}\n")
-
     equipos.append(equipo)
 
     print("\nEquipo creado con éxito:")
@@ -134,6 +125,32 @@ def ver_lista_equipos():
         for i, equipo in enumerate(equipos, 1):
             print(f"{i}. {equipo}")
 
+def agregar_jugador_equipo():
+    ver_lista_equipos()
+    nombre_e = input("Ingrese el nombre del equipo: ")
+    equipo = Equipo(nombre_e)
+    while True:
+        nombre_j = input("Ingrese el nombre del jugador (o 'salir' para terminar): ")
+        if nombre_j.lower() == 'salir':
+            break
+        else:
+            nombre_j = input("Ingrese el nombre del jugador: ")
+            numero_j = input("Ingrese el número del jugador: ")
+            goles_j = input("Ingrese los goles anotados: ")
+
+            jugador = Jugador(nombre_j, numero_j, goles_j)
+            jugadores.append(jugador)
+
+            equipo.agregar_jugadores(jugador)
+            print(f"Jugador {nombre_j} agregado al equipo {nombre_e}\n")
+
+        equipos.append(equipo)
+    print("\nEquipo creado con éxito:")
+    print(equipo)
+
+
+def eliminar_jugador_equipo():
+    pass
 
 def validar_lista_numeros(mensaje, max_valor):
     """Solicita una lista de números separados por comas y los valida."""
