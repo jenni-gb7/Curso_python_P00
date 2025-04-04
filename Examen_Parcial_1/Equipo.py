@@ -86,3 +86,4 @@ class Equipo:
         Devuelve una representación en cadena del equipo.
         """
         return f"ID: {self.id_Equipo}, Equipo: {self._nombre_e}, Goles Totales: {self.total_goles()}"
+
