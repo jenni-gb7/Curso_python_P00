@@ -1,7 +1,7 @@
 """
 Jennifer Marlene Gutiérrez Beteta
 10 de Abril de 2025.
-
+5 de 7 kyu
 Descripción del programa:
 Su trabajo consiste en escribir una sencilla función de validación de contraseñas, como se ve en muchos sitios web.
 
